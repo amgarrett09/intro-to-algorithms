@@ -21,6 +21,17 @@ function find1DPeak(arr) {
     }
 }
 
+// T(n) = O(1) + O(1) + T(n/4) ...
+// T(n) iO(1) + T(n/2^i)
+// T(1) = O(1)
+// n/2^i = 1
+// log(n/2^i) = 0
+// log(n) - log(2^i) = 0
+// log(n) - ilog(2) = 0
+// log(n) = ilog(2)
+// i = log_2(n)
+// complexity: log(n)
+
 // tests
 const arr1 = [6, 9, 6, 8, 3, 0, 9, 1, 8];
 const arr2 = [0, 1, 2, 3, 4, 5, 5, 2, 3];
@@ -50,13 +61,16 @@ console.log("Expected 3, received " + find1DPeak(arr11)[0].toString());
 console.log("Expected 8, received " + find1DPeak(arr12)[0].toString());
 console.log("\n");
 
+
 // 2D PEAK FINDING
 
 
 /* Same principle as a binary search. We start with the middle row and find the 1D peak of that row.
 We then look one cell above. If it's bigger we repeat the process on the top half of the array. If not,
 we look at the lower cell. If that's bigger, we repeat for the bottom half of the array. If neither
-is true, we've found our 2D peak. Complexity is O(log(n)log(m)), where n and m are the dimensions
+is true, we've found our 2D peak. 
+
+Complexity is O(log(n)log(m)), where n and m are the dimensions
 of the array */
 function find2DPeak(arr) {
     let top = 0;
@@ -77,6 +91,14 @@ function find2DPeak(arr) {
         }
     }
 }
+
+// T(n, m) = O(1) + O(log(m)) + T(n/2, m)
+// T(n, m) = iO(log(m)) + T(n/2^i, m)
+// T(1, m) = O(log(m))
+// i = log(n)
+// T(n, m) = log(n)O(log(m)) + O(log(m))
+// Comlexity: O(log(n)log(m))
+
 
 // tests
 
