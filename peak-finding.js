@@ -21,16 +21,18 @@ function find1DPeak(arr) {
     }
 }
 
+// T(n) = O(1) + T(n/2)
 // T(n) = O(1) + O(1) + T(n/4) ...
-// T(n) iO(1) + T(n/2^i)
+// T(n) = iO(1) + T(n/2^i)
 // T(1) = O(1)
 // n/2^i = 1
 // log(n/2^i) = 0
 // log(n) - log(2^i) = 0
 // log(n) - ilog(2) = 0
 // log(n) = ilog(2)
-// i = log_2(n)
-// complexity: log(n)
+// i = log(n)
+// T(n) = log(n)O(1) + O(1)
+// asymptotic complexity: O(log(n))
 
 // tests
 const arr1 = [6, 9, 6, 8, 3, 0, 9, 1, 8];
@@ -97,7 +99,7 @@ function find2DPeak(arr) {
 // T(1, m) = O(log(m))
 // i = log(n)
 // T(n, m) = log(n)O(log(m)) + O(log(m))
-// Comlexity: O(log(n)log(m))
+// asymptotic comlexity: O(log(n)log(m))
 
 
 // tests
