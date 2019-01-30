@@ -34,35 +34,6 @@ function find1DPeak(arr) {
 // T(n) = log(n)O(1) + O(1)
 // asymptotic complexity: O(log(n))
 
-// tests
-const arr1 = [6, 9, 6, 8, 3, 0, 9, 1, 8];
-const arr2 = [0, 1, 2, 3, 4, 5, 5, 2, 3];
-const arr3 = [7, 2, 5, 0, 0, 6, 8, 6, 6];
-const arr4 = [1, 5, 7, 2, 8, 0, 0, 2, 2, 6];
-const arr5 = [8, 7, 9, 8, 8, 9, 0, 5, 2, 1];
-const arr6 = [8, 7, 9, 8, 8, 9, 6, 5, 2, 1];
-const arr7 = [0, 1, 2, 3, 4, 5, 6, 7, 8];
-const arr8 = [7, 6, 5, 4, 3, 2, 1, 0];
-const arr9 = [1];
-const arr10 = [1, 2];
-const arr11 = [1, 2, 3];
-const arr12 = [9, 3, 3, 7, 8];
-
-console.log("1D peak-finding tests:\n");
-console.log("Expected 9, received " + find1DPeak(arr1)[0].toString());
-console.log("Expected 5, received " + find1DPeak(arr2)[0].toString());
-console.log("Expected 8, received " + find1DPeak(arr3)[0].toString());
-console.log("Expected 8, received " + find1DPeak(arr4)[0].toString());
-console.log("Expected 5, received " + find1DPeak(arr5)[0].toString());
-console.log("Expected 9, received " + find1DPeak(arr6)[0].toString());
-console.log("Expected 8, received " + find1DPeak(arr7)[0].toString());
-console.log("Expected 7, received " + find1DPeak(arr8)[0].toString());
-console.log("Expected 1, received " + find1DPeak(arr9)[0].toString());
-console.log("Expected 2, received " + find1DPeak(arr10)[0].toString());
-console.log("Expected 3, received " + find1DPeak(arr11)[0].toString());
-console.log("Expected 8, received " + find1DPeak(arr12)[0].toString());
-console.log("\n");
-
 
 // 2D PEAK FINDING
 
@@ -100,43 +71,3 @@ function find2DPeak(arr) {
 // i = log(n)
 // T(n, m) = log(n)O(log(m)) + O(log(m))
 // asymptotic comlexity: O(log(n)log(m))
-
-
-// tests
-
-const twoDArr1 = [
-    [0, 7, 7], 
-    [6, 8, 5], 
-    [3, 3, 0]
-];
-const twoDArr2 = [
-    [0, 1, 2], 
-    [2, 0, 3]
-];
-const twoDArr3 = [
-    [1, 5, 1]
-];
-const twoDArr4 = [
-    [3, 2, 1]
-];
-const twoDArr5 = [
-    [8, 9, 6],
-    [7, 6, 1],
-    [0, 2, 8]
-]
-const twoDArr6 = [
-    [2, 8, 4, 9, 8],
-    [9, 3, 3, 7, 8],
-    [1, 5, 0, 6, 6],
-    [2, 10, 8, 8, 0],
-    [1, 2, 2, 9, 1]
-]
-
-console.log("2D peak finding tests:\n");
-console.log("Expected 8, received " + find2DPeak(twoDArr1).toString());
-console.log("Expected 2, received " + find2DPeak(twoDArr2).toString());
-console.log("Expected 5, received " + find2DPeak(twoDArr3).toString());
-console.log("Expected 3, received " + find2DPeak(twoDArr4).toString());
-console.log("Expected 9, received " + find2DPeak(twoDArr5).toString());
-console.log("Expected 10, received " + find2DPeak(twoDArr6).toString());
-

@@ -1,0 +1,22 @@
+{
+  "name": "intro-to-algorithms",
+  "version": "1.0.0",
+  "description": "Some notes and exercises I did while following along with MIT's 'Intro to Algorithms' course (6.006)",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amgarrett09/intro-to-algorithms.git"
+  },
+  "author": "Alex Garrett",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amgarrett09/intro-to-algorithms/issues"
+  },
+  "homepage": "https://github.com/amgarrett09/intro-to-algorithms#readme",
+  "devDependencies": {
+    "jest": "^24.0.0"
+  }
+}
