@@ -1,7 +1,6 @@
 /* PEAK FINDING: Given a 1D array, find *a* peak. A number at index i is a peak
 iff i-1 <= i and i+1 <= i */
 
-
 /* Binary search algorithm. Returns a peak and its index. Complexity is O(log(n)) */
 function find1DPeak(arr) {
     let left = 0;
@@ -10,7 +9,7 @@ function find1DPeak(arr) {
 
     while (left <= right) {
         index = left + Math.floor((right - left) / 2);
-        
+
         if (index > 0 && arr[index - 1] > arr[index]) {
             right = index - 1;
         } else if (index < arr.length - 1 && arr[index + 1] > arr[index]) {
@@ -34,9 +33,7 @@ function find1DPeak(arr) {
 // T(n) = log(n)O(1) + O(1)
 // asymptotic complexity: O(log(n))
 
-
 // 2D PEAK FINDING
-
 
 /* Same principle as a binary search. We start with the middle row and find the 1D peak of that row.
 We then look one cell above. If it's bigger we repeat the process on the top half of the array. If not,
@@ -71,3 +68,5 @@ function find2DPeak(arr) {
 // i = log(n)
 // T(n, m) = log(n)O(log(m)) + O(log(m))
 // asymptotic comlexity: O(log(n)log(m))
+
+module.exports = { find1DPeak, find2DPeak };
