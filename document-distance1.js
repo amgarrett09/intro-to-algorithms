@@ -22,3 +22,5 @@ function getWordList(st) {
 
     return output;
 }
+
+module.exports = { getWordList };
