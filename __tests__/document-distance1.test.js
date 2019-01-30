@@ -1,4 +1,4 @@
-const dd = require("../document-distance1.js");
+const dd = require("../algorithms/document-distance1.js");
 
 test("test getWordList", () => {
     expect(dd.getWordList("Hello, I am a programmer")).toEqual([

@@ -1,4 +1,4 @@
-const pf = require("../peak-finding.js");
+const pf = require("../algorithms/peak-finding.js");
 
 test("test 1D peak finding with host of values", () => {
     expect(pf.find1DPeak([6, 9, 6, 8, 3, 0, 9, 1, 8])).toEqual([9, 1]);
