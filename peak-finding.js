@@ -33,9 +33,9 @@ function find1DPeak(arr) {
 // T(n) = log(n)O(1) + O(1)
 // asymptotic complexity: O(log(n))
 
-// 2D PEAK FINDING
+/* 2D PEAK FINDING
 
-/* Same principle as a binary search. We start with the middle row and find the 1D peak of that row.
+Same principle as a binary search. We start with the middle row and find the 1D peak of that row.
 We then look one cell above. If it's bigger we repeat the process on the top half of the array. If not,
 we look at the lower cell. If that's bigger, we repeat for the bottom half of the array. If neither
 is true, we've found our 2D peak. 
