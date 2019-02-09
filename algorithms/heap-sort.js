@@ -60,9 +60,9 @@ maxHeapify, the number of swaps we need to do at the next level decreases,
 and some careful counting reveals that this algorithm has an actual
 complexity of O(n).*/
 function buildMaxHeap(arr) {
-    const start = Math.floor((arr.length - 1) / 2);
+    const start = Math.floor((arr.length) / 2);
 
-    for (let i = start; i >= 0; i--) {
+    for (let i = start; i >= 1; i--) {
         maxHeapify(arr, i);
     }
 }
