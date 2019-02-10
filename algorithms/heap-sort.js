@@ -15,7 +15,7 @@ roots of max heaps. Complexity is O(log(n))*/
 function maxHeapify(arr, n) {
     let root = n - 1;
     let left = n * 2 - 1;
-    let right = n * 2;
+    let right = left + 1;
     const heapSize = arr.length;
     let largest;
 
@@ -39,10 +39,10 @@ function maxHeapify(arr, n) {
             [arr[largest], arr[root]] = [arr[root], arr[largest]];
 
             // set up next iteration
-            let n = largest + 1;
+            let n = largest + 1
             root = n - 1;
-            left = n * 2 - 1;
-            right = n * 2;
+            left = 2*n - 1;
+            right = left + 1;
         } else {
             // If largest is the root, then we're done
             break;
@@ -69,7 +69,6 @@ function buildMaxHeap(arr) {
 
 /* Returns an array sorted from greatest to smallest. Time complexity is 
 O(nlog(n)).*/
-
 function heapSort(arr) {
     const output = [];
 
