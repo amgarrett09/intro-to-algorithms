@@ -85,7 +85,7 @@ function median(arr1, arr2) {
 function calcMedian(arr) {
   const middle = (arr.length - 1) / 2;
 
-  if (Math.floor(middle !== middle)) {
+  if (Math.floor(middle) !== middle) {
     const i = Math.floor(middle);
     const j = i + 1;
 
